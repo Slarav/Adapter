@@ -29,21 +29,21 @@ public class ArrayAdapterAlertFrete extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-		// carrega o layout
-		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		rowView = inflater.inflate(R.layout.alert_listview_default_row, parent, false);
+	// carrega o layout
+	LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	rowView = inflater.inflate(R.layout.alert_listview_default_row, parent, false);
       
-		// recupera os elementos de tela
+	// recupera os elementos de tela
         ImageView ivImagem = (ImageView) rowView.findViewById(R.id.imvRowAlertDefault);
         TextView tvLabel = (TextView) rowView.findViewById(R.id.tvwRowAlertDefault);
         LinearLayout linearRowAlertDefault = (LinearLayout) rowView.findViewById(R.id.linearRowAlertDefault);
 
-		// recupera a posição
+	// recupera a posição
         String texto = this.getItem(position);
-		// define um valor para a linha
+	// define um valor para a linha
         tvLabel.setText(texto);
 
-		// verifica se é par ou impar, para adicionar um fundo diferente a cada cor
+	// verifica se é par ou impar, para adicionar um fundo diferente a cada cor
         if(position % 2 == 0){
             linearRowAlertDefault.setBackgroundColor(context.getResources().getColor(R.color.white));
         } else {
@@ -62,5 +62,4 @@ public class ArrayAdapterAlertFrete extends ArrayAdapter<String> {
     public String getItem(int position) {
         return super.getItem(position);
     }
-
 }

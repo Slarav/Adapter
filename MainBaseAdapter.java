@@ -59,13 +59,13 @@ public class MainBaseAdapter extends BaseAdapter {
 
         // Recuperando os elementos do layout de image_item
         ImageView ivImageCI = (ImageView) layuot.findViewById(R.id.ivImageCI);
-		// Define uma imagem por meio de uma URI
-		ivImageCI.setImageURI(Uri.parse(mLista.get(position).getmImage()));
-       
-		// Define o tamanho da Imagem
+	// Define uma imagem por meio de uma URI
+	ivImageCI.setImageURI(Uri.parse(mLista.get(position).getmImage()));
+
+	// Define o tamanho da Imagem
         ivImageCI.getLayoutParams().height = mHeight;
 		
-		// Recupera objetos de texto
+	// Recupera objetos de texto
         TextView tvDescriptionCI = (TextView) layuot.findViewById(R.id.tvDescriptionCI);
         tvDescriptionCI.setText(mLista.get(position).getmDescription());
 

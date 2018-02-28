@@ -36,11 +36,11 @@ public class MainCursorAdapter extends CursorAdapter {
 
 	// Conforme o valor passado por parâmetro, é definido o layout a ser utilizado
         if(layout.equalsIgnoreCase("pequena")){
-			// Tamanho pequeno
-            return mInflater.inflate(R.layout.layout_image_item_pequena, viewGroup, false);
+	    // Tamanho pequeno
+    	    return mInflater.inflate(R.layout.layout_image_item_pequena, viewGroup, false);
 
         } else if (layout.equalsIgnoreCase("grande")){
-			// Tamanho grande
+	    // Tamanho grande
             return mInflater.inflate(R.layout.layout_image_item_grande, viewGroup, false);
 
         } else {
@@ -55,10 +55,10 @@ public class MainCursorAdapter extends CursorAdapter {
 
         // Recuperando os elementos do layout 
         ImageView ivImage = (ImageView) view.findViewById(R.id.ivImage);
-		// Definindo uma imagem por meio de um caminho
+	// Definindo uma imagem por meio de um caminho
         ivImage.setImageURI(Uri.parse(cursor.getString(cursor.getColumnIndex("caminho"))));
 
-		// Recuperando os elementos do layout 
+	// Recuperando os elementos do layout 
         TextView tvDescription = (TextView) view.findViewById(R.id.tvDescription);
         // Definindo um texto
         tvDescription.setText(cursor.getString(cursor.getColumnIndex("nome")));
